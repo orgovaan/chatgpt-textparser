@@ -1,0 +1,709 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1152,2297" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:str="clr-namespace:System.Text.RegularExpressions;assembly=System.Text.RegularExpressions" xmlns:ue="clr-namespace:UiPath.Excel;assembly=UiPath.Excel.Activities" xmlns:ueab="clr-namespace:UiPath.Excel.Activities.Business;assembly=UiPath.Excel.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uibi="http://schemas.uipath.com/workflow/infrastructure/baf/uibi" xmlns:uiisi="http://schemas.uipath.com/workflow/infrastructure/is/uiisi" xmlns:uoia="clr-namespace:UiPath.OpenAI.IntegrationService.Activities;assembly=UiPath.OpenAI.IntegrationService.Activities" xmlns:uoic="clr-namespace:UiPath.OpenAI.IntegrationService.Client;assembly=UiPath.OpenAI.IntegrationService" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>UiPath.BAF.Infrastructure.Entity</x:String>
+      <x:String>UiPath.IntegrationService.Infrastructure.Descriptor</x:String>
+      <x:String>UiPath.BAF.Infrastructure.Enums</x:String>
+      <x:String>UiPath.BAF.Infrastructure.Telemetry</x:String>
+      <x:String>UiPath.BAF.Infrastructure</x:String>
+      <x:String>UiPath.BAF.Infrastructure.Connection</x:String>
+      <x:String>UiPath.OpenAI.IntegrationService.Activities</x:String>
+      <x:String>UiPath.IntegrationCore.Activities</x:String>
+      <x:String>UiPath.BAF.Activities</x:String>
+      <x:String>UiPath.BAF.Infrastructure.Contracts</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>UiPath.OpenAI.IntegrationService.Client</x:String>
+      <x:String>UiPath.OpenAI.IntegrationService.Client</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Excel.Activities.Business</x:String>
+      <x:String>UiPath.Excel.Model</x:String>
+      <x:String>UiPath.Shared.Activities.Business</x:String>
+      <x:String>System.Text.RegularExpressions</x:String>
+      <x:String>Microsoft.VisualBasic.CompilerServices</x:String>
+      <x:String>UiPath.Platform.ResourceHandling</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Activities.Runtime.Collections</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.BAF.Infrastructure</AssemblyReference>
+      <AssemblyReference>UiPath.IntegrationService.Infrastructure</AssemblyReference>
+      <AssemblyReference>UiPath.OpenAI.IntegrationService.Activities</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>UiPath.OpenAI.IntegrationService</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>System.Text.RegularExpressions</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.Linq.Parallel</AssemblyReference>
+      <AssemblyReference>System.Collections.Immutable</AssemblyReference>
+      <AssemblyReference>System.Linq.Queryable</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Forms</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Core</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <sap:WorkflowViewStateService.ViewState>
+    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+      <x:Boolean x:Key="ShouldCollapseAll">False</x:Boolean>
+      <x:Boolean x:Key="ShouldExpandAll">True</x:Boolean>
+    </scg:Dictionary>
+  </sap:WorkflowViewStateService.ViewState>
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="1014,2232" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="ChatGptResponse" />
+      <Variable x:TypeArguments="x:String" Name="OutputString">
+        <Variable.Default>
+          <Literal x:TypeArguments="x:String" Value="" />
+        </Variable.Default>
+      </Variable>
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" ShowExcelWindow="{x:Null}" DisplayName="Excel Process Scope" sap:VirtualizedContainerService.HintSize="952,2121" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_1">
+      <ueab:ExcelProcessScopeX.Body>
+        <ActivityAction x:TypeArguments="ui:IExcelProcess">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="ui:IExcelProcess" Name="ExcelProcessScopeTag" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="918,2034" sap2010:WorkflowViewState.IdRef="Sequence_4">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" CreateNewFile="False" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="856,1923" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_1" ResizeWindow="None" WorkbookPath="ScrapedData_OnlineAuctions.xlsx">
+              <ueab:ExcelApplicationCard.Body>
+                <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="ue:IWorkbookQuickHandle" Name="Excel" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="822,1654" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ui:InterruptibleWhile CurrentIndex="{x:Null}" Condition="True" DisplayName="While" sap:VirtualizedContainerService.HintSize="760,1543" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_4">
+                      <ui:InterruptibleWhile.Body>
+                        <Sequence DisplayName="" sap:VirtualizedContainerService.HintSize="726,1407" sap2010:WorkflowViewState.IdRef="Sequence_57">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <ueab:ExcelForEachRowX DisplayName="For Each Excel Row" EmptyRowBehavior="Stop" HasHeaders="True" sap:VirtualizedContainerService.HintSize="684,1319" sap2010:WorkflowViewState.IdRef="ExcelForEachRowX_6" Range="[Excel.Sheet(&quot;Sheet3&quot;)]" SaveAfterEachRow="False">
+                            <ueab:ExcelForEachRowX.Body>
+                              <ActivityAction x:TypeArguments="ue:CurrentRowQuickHandle, x:Int32">
+                                <ActivityAction.Argument1>
+                                  <DelegateInArgument x:TypeArguments="ue:CurrentRowQuickHandle" Name="CurrentRow" />
+                                </ActivityAction.Argument1>
+                                <ActivityAction.Argument2>
+                                  <DelegateInArgument x:TypeArguments="x:Int32" Name="CurrentIndex" />
+                                </ActivityAction.Argument2>
+                                <Sequence sap:VirtualizedContainerService.HintSize="650,1129" sap2010:WorkflowViewState.IdRef="Sequence_66">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <If Condition="[String.IsNullOrEmpty(CurrentRow.Byindex(62).ToString)]" sap:VirtualizedContainerService.HintSize="588,1018" sap2010:WorkflowViewState.IdRef="If_10">
+                                    <If.Then>
+                                      <Sequence DisplayName="" sap:VirtualizedContainerService.HintSize="554,836" sap2010:WorkflowViewState.IdRef="Sequence_64">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                        <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="512,748" sap2010:WorkflowViewState.IdRef="Sequence_59">
+                                          <Sequence.Variables>
+                                            <Variable x:TypeArguments="x:String" Name="Description" />
+                                            <Variable x:TypeArguments="x:String" Name="Output" />
+                                            <Variable x:TypeArguments="str:MatchCollection" Name="matches" />
+                                          </Sequence.Variables>
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                          <Assign sap:VirtualizedContainerService.HintSize="450,82" sap2010:WorkflowViewState.IdRef="Assign_35">
+                                            <Assign.To>
+                                              <OutArgument x:TypeArguments="x:String">[Description]</OutArgument>
+                                            </Assign.To>
+                                            <Assign.Value>
+                                              <InArgument x:TypeArguments="x:String">[CurrentRow.ByField("Leírás :").ToString]</InArgument>
+                                            </Assign.Value>
+                                          </Assign>
+                                          <uoia:GenerateChatCompletion ActivityInstanceId="14c5031f-e1e9-4861-837e-77d8c0f73248" BindingsVersion="2.1" BusinessEntityName="Generate Chat Completion" ConfiguredBusinessEntity="generateChatCompletion" ConnectionId="3283439e-0c36-4366-802c-ac955f888045" Connector="uipath-openai-openai" CrudOperation="Create" DesignConnectionEnabled="True" DisplayName="Generate Chat Completion" sap:VirtualizedContainerService.HintSize="450,152" sap2010:WorkflowViewState.IdRef="GenerateChatCompletion_12">
+                                            <uoia:GenerateChatCompletion.BusinessEntity>
+                                              <uibi:BusinessEntity Name="generateChatCompletion">
+                                                <uibi:BusinessEntity.AllFields>
+                                                  <scg:List x:TypeArguments="uibi:EntityField" Capacity="15">
+                                                    <uiisi:OperationEntityField x:TypeArguments="uoic:GenerateChatCompletion" ArgumentDirection="In" ArgumentType="uoic:GenerateChatCompletion" DataType="GenerateChatCompletion" Description="The request data in JSON format for the chat completion" DisplayName="Completion Request" FormDataType="ExpressionTextBox" IsChildEntityField="False" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="True" IsIdField="False" IsMandatory="True" IsParameter="True" IsPriority="False" IsSelected="False" Location="Undefined" Name="body" ShouldFilterOnChange="False" />
+                                                    <uiisi:OperationEntityField x:TypeArguments="uoic:GenerateChatCompletion" x:Name="__ReferenceID28" ArgumentDirection="Out" ArgumentType="uoic:GenerateChatCompletion" DataType="GenerateChatCompletion" Description="The Generate Chat Completion object returned." DisplayName="Response" FormDataType="ExpressionTextBox" IsChildEntityField="False" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="False" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Undefined" Name="Response" ShouldFilterOnChange="False">
+                                                      <uiisi:OperationEntityField.Metadata>
+                                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                          <x:Boolean x:Key="IsPermanentlyHidden">False</x:Boolean>
+                                                        </scg:Dictionary>
+                                                      </uiisi:OperationEntityField.Metadata>
+                                                    </uiisi:OperationEntityField>
+                                                    <uiisi:OperationEntityField x:TypeArguments="x:String" x:Name="__ReferenceID15" ArgumentDirection="In" ArgumentType="x:String" DataType="String" DefaultValue="Write an email to a new sales lead" Description="The prompt to use for the chat completion(s) generation" DisplayName="Prompt" FormDataType="ExpressionTextBox" InArgumentValue="[&quot;I have several different lines of texts in Hungarian for you to work on. &#xD;&#xA;Each piece of text is a description about a real estate that is being auctioned. &#xD;&#xA;An auctioned real estate may be a house in a city or a tiny piece of land in rural areas, or anything in between.&#xD;&#xA;Accordingly, the description of different real estates may vary in length and complexity, and contain different pieces of information of interest in a rather random order. &#xD;&#xA;The pieces of information could be anything that may influence one's decision about whether or not to place a bid for a given real estate. &#xD;&#xA;The list of pieces of information of interest contains 13 elements, please find these elements (information piece categories) in Hungarian is as follows:&#xD;&#xA;&#xD;&#xA;1. ingatlan jellege/típusa&#xD;&#xA;2. telek területe&#xD;&#xA;3. telek/földrészlet jellemzői&#xD;&#xA;4. közművesítettség&#xD;&#xA;5. építmény rendeltetése&#xD;&#xA;6. építmény területe&#xD;&#xA;7. építmény állapota&#xD;&#xA;8. építmény kora&#xD;&#xA;9. szobák száma&#xD;&#xA;10. építmény falazata&#xD;&#xA;11. építmény alapszerkezete&#xD;&#xA;12. építmény teteje&#xD;&#xA;13. minden egyéb ami az előző kategóriákba nem került leírásra&#xD;&#xA;&#xD;&#xA;I want you to extract the relevant information values for these 13 different information piece categories from the texts.&#xD;&#xA;If a piece of text does not contain information on an information piece category (e.g. the number of rooms is not specified), just write the character: -.&#xD;&#xA;Do not create and new information piece categories, only use the ones I listed above. &#xD;&#xA;If a piece of information does not fit any of the categories I provided, just put that piece of information in the information piece category ***minden egyéb ami az előző kategóriákba nem került leírásra***.&#xD;&#xA;I want you to work with the text as follows:&#xD;&#xA;&#xD;&#xA;0. State the number of the information piece category, and then subsequently in the same line of text, without any line breaks&#xD;&#xA;1. write the information piece category, and then subsequently in the same line of text, without any line breaks&#xD;&#xA;2. write a ß character, and then subsequently in the same line of text, without any line breaks&#xD;&#xA;3. write the piece of information you extracted from the text that is relevant to the information piece category, , and then subsequently in the same line of text, without any line breaks&#xD;&#xA;4. add a $ character, then&#xD;&#xA;5. add a new line character, and&#xD;&#xA;6. do the same steps 1-5, with every information piece category.&#xD;&#xA;&#xD;&#xA;An example output is as follows:&#xD;&#xA;&#xD;&#xA;1. ingatlan jellege/típusaßlakóépület$&#xD;&#xA;2. telek területeß2000 m2$&#xD;&#xA;3. telek/földrészlet jellemzőißkert$&#xD;&#xA;4. közművesítettségßvíz, villany, gáz$&#xD;&#xA;5. építmény rendeltetéseßlakóépület$&#xD;&#xA;6. építmény területeß32 m2$&#xD;&#xA;7. építmény állapotaßromos$&#xD;&#xA;8. építmény koraß23 év$&#xD;&#xA;9. szobák számaß3$&#xD;&#xA;10. építmény falazataßtégla$&#xD;&#xA;11. építmény alapszerkezeteßfa$&#xD;&#xA;12. építmény tetejeßcserép$&#xD;&#xA;13. minden egyéb ami az előző kategóriákba nem került leírásraßszép züld fű nő$&#xD;&#xA;&#xD;&#xA;Before providing your response, check yourself in three ways:&#xD;&#xA;&#xD;&#xA;1. your response should always contain the same number of lines as the number of elements in the list of pieces of information of interest I provided above.&#xD;&#xA;That is, your response should contain exactly 13 lines. A response with less or more than 13 lines is unacceptable.&#xD;&#xA;2. Each line should be made up of 5 elements, and should have the following structure:&#xD;&#xA;&lt;number of the information piece category&gt; &lt;name of the information piece category&gt; &lt;ß character&gt; &lt;the relevant information piece you extracted from the input text&gt; &lt;$ character&gt;&#xD;&#xA;3. Each line should end with a $ character. You tend to miss to add these, so make an extra effort in checking that you did add them as required.&#xD;&#xA;&#xD;&#xA;If any of these 3 requirements are not fulfilled, your response is wrong, try again.&#xD;&#xA;&#xD;&#xA;I hope the instructions are clear. Let's start with the first text that you need to parse:&quot; + Environment.Newline + Description]" IsChildEntityField="True" IsCustomField="False" IsDefault="False" IsDeletable="False" IsHidden="False" IsIdField="False" IsMandatory="True" IsPriority="False" IsSelected="False" Location="Undefined" Name="body.prompt" Order="1" ShouldFilterOnChange="False">
+                                                      <uiisi:OperationEntityField.ArgumentValue>
+                                                        <InArgument x:TypeArguments="x:String" xml:space="preserve">["I have several different lines of texts in Hungarian for you to work on. 
+Each piece of text is a description about a real estate that is being auctioned. 
+An auctioned real estate may be a house in a city or a tiny piece of land in rural areas, or anything in between.
+Accordingly, the description of different real estates may vary in length and complexity, and contain different pieces of information of interest in a rather random order. 
+The pieces of information could be anything that may influence one's decision about whether or not to place a bid for a given real estate. 
+The list of pieces of information of interest contains 13 elements, please find these elements (information piece categories) in Hungarian is as follows:
+
+1. ingatlan jellege/típusa
+2. telek területe
+3. telek/földrészlet jellemzői
+4. közművesítettség
+5. építmény rendeltetése
+6. építmény területe
+7. építmény állapota
+8. építmény kora
+9. szobák száma
+10. építmény falazata
+11. építmény alapszerkezete
+12. építmény teteje
+13. minden egyéb ami az előző kategóriákba nem került leírásra
+
+I want you to extract the relevant information values for these 13 different information piece categories from the texts.
+If a piece of text does not contain information on an information piece category (e.g. the number of rooms is not specified), just write the character: -.
+Do not create and new information piece categories, only use the ones I listed above. 
+If a piece of information does not fit any of the categories I provided, just put that piece of information in the information piece category ***minden egyéb ami az előző kategóriákba nem került leírásra***.
+I want you to work with the text as follows:
+
+0. State the number of the information piece category, and then subsequently in the same line of text, without any line breaks
+1. write the information piece category, and then subsequently in the same line of text, without any line breaks
+2. write a ß character, and then subsequently in the same line of text, without any line breaks
+3. write the piece of information you extracted from the text that is relevant to the information piece category, , and then subsequently in the same line of text, without any line breaks
+4. add a $ character, then
+5. add a new line character, and
+6. do the same steps 1-5, with every information piece category.
+
+An example output is as follows:
+
+1. ingatlan jellege/típusaßlakóépület$
+2. telek területeß2000 m2$
+3. telek/földrészlet jellemzőißkert$
+4. közművesítettségßvíz, villany, gáz$
+5. építmény rendeltetéseßlakóépület$
+6. építmény területeß32 m2$
+7. építmény állapotaßromos$
+8. építmény koraß23 év$
+9. szobák számaß3$
+10. építmény falazataßtégla$
+11. építmény alapszerkezeteßfa$
+12. építmény tetejeßcserép$
+13. minden egyéb ami az előző kategóriákba nem került leírásraßszép züld fű nő$
+
+Before providing your response, check yourself in three ways:
+
+1. your response should always contain the same number of lines as the number of elements in the list of pieces of information of interest I provided above.
+That is, your response should contain exactly 13 lines. A response with less or more than 13 lines is unacceptable.
+2. Each line should be made up of 5 elements, and should have the following structure:
+&lt;number of the information piece category&gt; &lt;name of the information piece category&gt; &lt;ß character&gt; &lt;the relevant information piece you extracted from the input text&gt; &lt;$ character&gt;
+3. Each line should end with a $ character. You tend to miss to add these, so make an extra effort in checking that you did add them as required.
+
+If any of these 3 requirements are not fulfilled, your response is wrong, try again.
+
+I hope the instructions are clear. Let's start with the first text that you need to parse:" + Environment.Newline + Description]</InArgument>
+                                                      </uiisi:OperationEntityField.ArgumentValue>
+                                                      <uiisi:OperationEntityField.Metadata>
+                                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                          <uiisi:CustomFieldsPriority x:Key="CustomFieldsPriority">Default</uiisi:CustomFieldsPriority>
+                                                        </scg:Dictionary>
+                                                      </uiisi:OperationEntityField.Metadata>
+                                                      <uiisi:OperationEntityField.Value>
+                                                        <VisualBasicValue x:TypeArguments="x:String" xml:space="preserve">["I have several different lines of texts in Hungarian for you to work on. 
+Each piece of text is a description about a real estate that is being auctioned. 
+An auctioned real estate may be a house in a city or a tiny piece of land in rural areas, or anything in between.
+Accordingly, the description of different real estates may vary in length and complexity, and contain different pieces of information of interest in a rather random order. 
+The pieces of information could be anything that may influence one's decision about whether or not to place a bid for a given real estate. 
+The list of pieces of information of interest contains 13 elements, please find these elements (information piece categories) in Hungarian is as follows:
+
+1. ingatlan jellege/típusa
+2. telek területe
+3. telek/földrészlet jellemzői
+4. közművesítettség
+5. építmény rendeltetése
+6. építmény területe
+7. építmény állapota
+8. építmény kora
+9. szobák száma
+10. építmény falazata
+11. építmény alapszerkezete
+12. építmény teteje
+13. minden egyéb ami az előző kategóriákba nem került leírásra
+
+I want you to extract the relevant information values for these 13 different information piece categories from the texts.
+If a piece of text does not contain information on an information piece category (e.g. the number of rooms is not specified), just write the character: -.
+Do not create and new information piece categories, only use the ones I listed above. 
+If a piece of information does not fit any of the categories I provided, just put that piece of information in the information piece category ***minden egyéb ami az előző kategóriákba nem került leírásra***.
+I want you to work with the text as follows:
+
+0. State the number of the information piece category, and then subsequently in the same line of text, without any line breaks
+1. write the information piece category, and then subsequently in the same line of text, without any line breaks
+2. write a ß character, and then subsequently in the same line of text, without any line breaks
+3. write the piece of information you extracted from the text that is relevant to the information piece category, , and then subsequently in the same line of text, without any line breaks
+4. add a $ character, then
+5. add a new line character, and
+6. do the same steps 1-5, with every information piece category.
+
+An example output is as follows:
+
+1. ingatlan jellege/típusaßlakóépület$
+2. telek területeß2000 m2$
+3. telek/földrészlet jellemzőißkert$
+4. közművesítettségßvíz, villany, gáz$
+5. építmény rendeltetéseßlakóépület$
+6. építmény területeß32 m2$
+7. építmény állapotaßromos$
+8. építmény koraß23 év$
+9. szobák számaß3$
+10. építmény falazataßtégla$
+11. építmény alapszerkezeteßfa$
+12. építmény tetejeßcserép$
+13. minden egyéb ami az előző kategóriákba nem került leírásraßszép züld fű nő$
+
+Before providing your response, check yourself in three ways:
+
+1. your response should always contain the same number of lines as the number of elements in the list of pieces of information of interest I provided above.
+That is, your response should contain exactly 13 lines. A response with less or more than 13 lines is unacceptable.
+2. Each line should be made up of 5 elements, and should have the following structure:
+&lt;number of the information piece category&gt; &lt;name of the information piece category&gt; &lt;ß character&gt; &lt;the relevant information piece you extracted from the input text&gt; &lt;$ character&gt;
+3. Each line should end with a $ character. You tend to miss to add these, so make an extra effort in checking that you did add them as required.
+
+If any of these 3 requirements are not fulfilled, your response is wrong, try again.
+
+I hope the instructions are clear. Let's start with the first text that you need to parse:" + Environment.Newline + Description]</VisualBasicValue>
+                                                      </uiisi:OperationEntityField.Value>
+                                                    </uiisi:OperationEntityField>
+                                                    <uiisi:OperationEntityField x:TypeArguments="x:String" x:Name="__ReferenceID16" ArgumentDirection="In" ArgumentType="x:String" DataType="String" Description="Instructions guide the AI to respond in a way that matches your intent. Defaults to null." DisplayName="Instruction" FormDataType="ExpressionTextBox" IsChildEntityField="True" IsCustomField="False" IsDefault="False" IsDeletable="False" IsHidden="False" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Undefined" Name="body.instruction" Order="3" ShouldFilterOnChange="False">
+                                                      <uiisi:OperationEntityField.Metadata>
+                                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                          <uiisi:CustomFieldsPriority x:Key="CustomFieldsPriority">Default</uiisi:CustomFieldsPriority>
+                                                        </scg:Dictionary>
+                                                      </uiisi:OperationEntityField.Metadata>
+                                                    </uiisi:OperationEntityField>
+                                                    <uiisi:OperationEntityField x:TypeArguments="x:String" x:Name="__ReferenceID17" ArgumentDirection="In" ArgumentType="x:String" DataType="String" DefaultValue="gpt-4" Description="The large language model (LLM) to use for the chat completion. Defaults to gpt-4" DisplayName="Model Name" FormDataType="ExpressionTextBox" InArgumentValue="gpt-3.5-turbo" IsChildEntityField="True" IsCustomField="False" IsDefault="False" IsDeletable="False" IsHidden="False" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Undefined" Name="body.model" Order="3" ShouldFilterOnChange="False">
+                                                      <uiisi:OperationEntityField.ArgumentValue>
+                                                        <InArgument x:TypeArguments="x:String">gpt-3.5-turbo</InArgument>
+                                                      </uiisi:OperationEntityField.ArgumentValue>
+                                                      <uiisi:OperationEntityField.EnumValues>
+                                                        <scg:List x:TypeArguments="x:String" Capacity="2">
+                                                          <x:String>gpt-4</x:String>
+                                                          <x:String>gpt-3.5-turbo</x:String>
+                                                        </scg:List>
+                                                      </uiisi:OperationEntityField.EnumValues>
+                                                      <uiisi:OperationEntityField.Metadata>
+                                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                          <uiisi:CustomFieldsPriority x:Key="CustomFieldsPriority">Default</uiisi:CustomFieldsPriority>
+                                                        </scg:Dictionary>
+                                                      </uiisi:OperationEntityField.Metadata>
+                                                      <uiisi:OperationEntityField.Value>
+                                                        <Literal x:TypeArguments="x:String">gpt-3.5-turbo</Literal>
+                                                      </uiisi:OperationEntityField.Value>
+                                                    </uiisi:OperationEntityField>
+                                                    <uiisi:OperationEntityField x:TypeArguments="s:Nullable(x:Int32)" ArgumentValue="{x:Reference __ReferenceID1}" Value="{x:Reference __ReferenceID0}" x:Name="__ReferenceID18" ArgumentDirection="In" ArgumentType="s:Nullable(x:Int32)" DataType="Int32" DefaultValue="1920" Description="The maximum number of tokens allowed for the prompt and generated answer. Fewer tokens are less expensive. Defaults to 3840." DisplayName="Max Tokens" FormDataType="ExpressionTextBox" IsChildEntityField="True" IsCustomField="False" IsDefault="False" IsDeletable="False" IsHidden="False" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Undefined" Name="body.max_tokens" Order="3" ShouldFilterOnChange="False">
+                                                      <uiisi:OperationEntityField.InArgumentValue>
+                                                        <InArgument x:TypeArguments="s:Nullable(x:Int32)" x:Name="__ReferenceID1">
+                                                          <Literal x:TypeArguments="s:Nullable(x:Int32)" x:Name="__ReferenceID0" Value="2300" />
+                                                        </InArgument>
+                                                      </uiisi:OperationEntityField.InArgumentValue>
+                                                      <uiisi:OperationEntityField.Metadata>
+                                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                          <uiisi:CustomFieldsPriority x:Key="CustomFieldsPriority">Default</uiisi:CustomFieldsPriority>
+                                                        </scg:Dictionary>
+                                                      </uiisi:OperationEntityField.Metadata>
+                                                    </uiisi:OperationEntityField>
+                                                    <uiisi:OperationEntityField x:TypeArguments="s:Nullable(x:Int32)" ArgumentValue="{x:Reference __ReferenceID3}" Value="{x:Reference __ReferenceID2}" x:Name="__ReferenceID19" ArgumentDirection="In" ArgumentType="s:Nullable(x:Int32)" DataType="Int32" DefaultValue="1" Description="A number of at least 1.  This determines how many completion choices the AI will return. Defaults to 1." DisplayName="N" FormDataType="ExpressionTextBox" IsChildEntityField="True" IsCustomField="False" IsDefault="False" IsDeletable="False" IsHidden="False" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Undefined" Name="body.n" Order="3" ShouldFilterOnChange="False">
+                                                      <uiisi:OperationEntityField.InArgumentValue>
+                                                        <InArgument x:TypeArguments="s:Nullable(x:Int32)" x:Name="__ReferenceID3">
+                                                          <Literal x:TypeArguments="s:Nullable(x:Int32)" x:Name="__ReferenceID2" Value="1" />
+                                                        </InArgument>
+                                                      </uiisi:OperationEntityField.InArgumentValue>
+                                                      <uiisi:OperationEntityField.Metadata>
+                                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                          <uiisi:CustomFieldsPriority x:Key="CustomFieldsPriority">Default</uiisi:CustomFieldsPriority>
+                                                        </scg:Dictionary>
+                                                      </uiisi:OperationEntityField.Metadata>
+                                                    </uiisi:OperationEntityField>
+                                                    <uiisi:OperationEntityField x:TypeArguments="s:Nullable(x:Double)" ArgumentValue="{x:Reference __ReferenceID5}" Value="{x:Reference __ReferenceID4}" x:Name="__ReferenceID20" ArgumentDirection="In" ArgumentType="s:Nullable(x:Double)" DataType="Double" DefaultValue="1" Description="⌘ ⌥ K&#xA;A number between 0 and 2.  Higher values like 0.8 will make the output more random, while lower values like 0.2 will make it more focused and deterministic. Defaults to 1." DisplayName="Temperature" FormDataType="ExpressionTextBox" IsChildEntityField="True" IsCustomField="False" IsDefault="False" IsDeletable="False" IsHidden="False" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Undefined" Name="body.temperature" Order="3" ShouldFilterOnChange="False">
+                                                      <uiisi:OperationEntityField.InArgumentValue>
+                                                        <InArgument x:TypeArguments="s:Nullable(x:Double)" x:Name="__ReferenceID5">
+                                                          <Literal x:TypeArguments="s:Nullable(x:Double)" x:Name="__ReferenceID4" Value="1" />
+                                                        </InArgument>
+                                                      </uiisi:OperationEntityField.InArgumentValue>
+                                                      <uiisi:OperationEntityField.Metadata>
+                                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                          <uiisi:CustomFieldsPriority x:Key="CustomFieldsPriority">Default</uiisi:CustomFieldsPriority>
+                                                        </scg:Dictionary>
+                                                      </uiisi:OperationEntityField.Metadata>
+                                                    </uiisi:OperationEntityField>
+                                                    <uiisi:OperationEntityField x:TypeArguments="s:Nullable(x:Double)" ArgumentValue="{x:Reference __ReferenceID7}" Value="{x:Reference __ReferenceID6}" x:Name="__ReferenceID21" ArgumentDirection="In" ArgumentType="s:Nullable(x:Double)" DataType="Double" DefaultValue="1" Description="A number between 0 and 1.  The lower the number, the fewer tokens are considered. Defaults to 1." DisplayName="Top P" FormDataType="ExpressionTextBox" IsChildEntityField="True" IsCustomField="False" IsDefault="False" IsDeletable="False" IsHidden="False" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Undefined" Name="body.top_p" Order="3" ShouldFilterOnChange="False">
+                                                      <uiisi:OperationEntityField.InArgumentValue>
+                                                        <InArgument x:TypeArguments="s:Nullable(x:Double)" x:Name="__ReferenceID7">
+                                                          <Literal x:TypeArguments="s:Nullable(x:Double)" x:Name="__ReferenceID6" Value="1" />
+                                                        </InArgument>
+                                                      </uiisi:OperationEntityField.InArgumentValue>
+                                                      <uiisi:OperationEntityField.Metadata>
+                                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                          <uiisi:CustomFieldsPriority x:Key="CustomFieldsPriority">Default</uiisi:CustomFieldsPriority>
+                                                        </scg:Dictionary>
+                                                      </uiisi:OperationEntityField.Metadata>
+                                                    </uiisi:OperationEntityField>
+                                                    <uiisi:OperationEntityField x:TypeArguments="s:Nullable(x:Boolean)" ArgumentValue="{x:Reference __ReferenceID9}" Value="{x:Reference __ReferenceID8}" x:Name="__ReferenceID22" ArgumentDirection="In" ArgumentType="s:Nullable(x:Boolean)" DataType="Boolean" DefaultValue="false" Description="Whether to stream back partial progress. If set, tokens will be sent as data-only server-sent events as they become available, with the stream terminated by a data: [DONE] message. Defaults to false." DisplayName="Stream" FormDataType="ExpressionTextBox" IsChildEntityField="True" IsCustomField="False" IsDefault="False" IsDeletable="False" IsHidden="False" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Undefined" Name="body.stream" Order="3" ShouldFilterOnChange="False">
+                                                      <uiisi:OperationEntityField.InArgumentValue>
+                                                        <InArgument x:TypeArguments="s:Nullable(x:Boolean)" x:Name="__ReferenceID9">
+                                                          <Literal x:TypeArguments="s:Nullable(x:Boolean)" x:Name="__ReferenceID8" Value="False" />
+                                                        </InArgument>
+                                                      </uiisi:OperationEntityField.InArgumentValue>
+                                                      <uiisi:OperationEntityField.Metadata>
+                                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                          <uiisi:CustomFieldsPriority x:Key="CustomFieldsPriority">Default</uiisi:CustomFieldsPriority>
+                                                        </scg:Dictionary>
+                                                      </uiisi:OperationEntityField.Metadata>
+                                                    </uiisi:OperationEntityField>
+                                                    <uiisi:OperationEntityField x:TypeArguments="x:String" x:Name="__ReferenceID23" ArgumentDirection="In" ArgumentType="x:String" DataType="String" Description="Up to 4 sequences where the API will stop generating further tokens. The returned text will not contain the stop sequence. Defaults to null." DisplayName="Stop" FormDataType="ExpressionTextBox" IsChildEntityField="True" IsCustomField="False" IsDefault="False" IsDeletable="False" IsHidden="False" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Undefined" Name="body.stop" Order="3" ShouldFilterOnChange="False">
+                                                      <uiisi:OperationEntityField.Metadata>
+                                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                          <uiisi:CustomFieldsPriority x:Key="CustomFieldsPriority">Default</uiisi:CustomFieldsPriority>
+                                                        </scg:Dictionary>
+                                                      </uiisi:OperationEntityField.Metadata>
+                                                    </uiisi:OperationEntityField>
+                                                    <uiisi:OperationEntityField x:TypeArguments="s:Nullable(x:Double)" ArgumentValue="{x:Reference __ReferenceID11}" Value="{x:Reference __ReferenceID10}" x:Name="__ReferenceID24" ArgumentDirection="In" ArgumentType="s:Nullable(x:Double)" DataType="Double" DefaultValue="0" Description="Number between -2.0 and 2.0. Positive values penalize new tokens based on whether they appear in the text so far, increasing the model's likelihood to talk about new topics. Defaults to 0." DisplayName="Presence Penalty" FormDataType="ExpressionTextBox" IsChildEntityField="True" IsCustomField="False" IsDefault="False" IsDeletable="False" IsHidden="False" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Undefined" Name="body.presence_penalty" Order="3" ShouldFilterOnChange="False">
+                                                      <uiisi:OperationEntityField.InArgumentValue>
+                                                        <InArgument x:TypeArguments="s:Nullable(x:Double)" x:Name="__ReferenceID11">
+                                                          <Literal x:TypeArguments="s:Nullable(x:Double)" x:Name="__ReferenceID10" Value="0" />
+                                                        </InArgument>
+                                                      </uiisi:OperationEntityField.InArgumentValue>
+                                                      <uiisi:OperationEntityField.Metadata>
+                                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                          <uiisi:CustomFieldsPriority x:Key="CustomFieldsPriority">Default</uiisi:CustomFieldsPriority>
+                                                        </scg:Dictionary>
+                                                      </uiisi:OperationEntityField.Metadata>
+                                                    </uiisi:OperationEntityField>
+                                                    <uiisi:OperationEntityField x:TypeArguments="s:Nullable(x:Double)" ArgumentValue="{x:Reference __ReferenceID13}" Value="{x:Reference __ReferenceID12}" x:Name="__ReferenceID25" ArgumentDirection="In" ArgumentType="s:Nullable(x:Double)" DataType="Double" DefaultValue="0" Description="Number between -2.0 and 2.0. Positive values penalize new tokens based on their existing frequency in the text so far, decreasing the model's likelihood to repeat the same line verbatim. Defaults to 0." DisplayName="Frequency Penalty" FormDataType="ExpressionTextBox" IsChildEntityField="True" IsCustomField="False" IsDefault="False" IsDeletable="False" IsHidden="False" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Undefined" Name="body.frequency_penalty" Order="3" ShouldFilterOnChange="False">
+                                                      <uiisi:OperationEntityField.InArgumentValue>
+                                                        <InArgument x:TypeArguments="s:Nullable(x:Double)" x:Name="__ReferenceID13">
+                                                          <Literal x:TypeArguments="s:Nullable(x:Double)" x:Name="__ReferenceID12" Value="0" />
+                                                        </InArgument>
+                                                      </uiisi:OperationEntityField.InArgumentValue>
+                                                      <uiisi:OperationEntityField.Metadata>
+                                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                          <uiisi:CustomFieldsPriority x:Key="CustomFieldsPriority">Default</uiisi:CustomFieldsPriority>
+                                                        </scg:Dictionary>
+                                                      </uiisi:OperationEntityField.Metadata>
+                                                    </uiisi:OperationEntityField>
+                                                    <uiisi:OperationEntityField x:TypeArguments="x:String" x:Name="__ReferenceID26" ArgumentDirection="In" ArgumentType="x:String" DataType="String" Description="A unique identifier representing your end-user, which can help OpenAI to monitor and detect abuse. Defaults to null." DisplayName="User" FormDataType="ExpressionTextBox" IsChildEntityField="True" IsCustomField="False" IsDefault="False" IsDeletable="False" IsHidden="False" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Undefined" Name="body.user" Order="3" ShouldFilterOnChange="False">
+                                                      <uiisi:OperationEntityField.Metadata>
+                                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                          <uiisi:CustomFieldsPriority x:Key="CustomFieldsPriority">Default</uiisi:CustomFieldsPriority>
+                                                        </scg:Dictionary>
+                                                      </uiisi:OperationEntityField.Metadata>
+                                                    </uiisi:OperationEntityField>
+                                                    <uiisi:OperationEntityField x:TypeArguments="x:String" x:Name="__ReferenceID27" ArgumentDirection="Out" ArgumentType="x:String" DataType="String" Description="The text for the top choice generated by the AI" DisplayName="Top Generated Text" FormDataType="ExpressionTextBox" IsChildEntityField="True" IsCustomField="False" IsDefault="False" IsDeletable="False" IsHidden="False" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Undefined" Name="Response.text" OutArgumentValue="[ChatGptResponse]" ShouldFilterOnChange="False">
+                                                      <uiisi:OperationEntityField.ArgumentValue>
+                                                        <OutArgument x:TypeArguments="x:String">[ChatGptResponse]</OutArgument>
+                                                      </uiisi:OperationEntityField.ArgumentValue>
+                                                      <uiisi:OperationEntityField.Metadata>
+                                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                          <uiisi:CustomFieldsPriority x:Key="CustomFieldsPriority">Default</uiisi:CustomFieldsPriority>
+                                                        </scg:Dictionary>
+                                                      </uiisi:OperationEntityField.Metadata>
+                                                      <uiisi:OperationEntityField.Value>
+                                                        <VisualBasicReference x:TypeArguments="x:String">[ChatGptResponse]</VisualBasicReference>
+                                                      </uiisi:OperationEntityField.Value>
+                                                    </uiisi:OperationEntityField>
+                                                  </scg:List>
+                                                </uibi:BusinessEntity.AllFields>
+                                                <uibi:BusinessEntity.EntityMetadata>
+                                                  <uibi:EntityMetadata Metadata="{x:Reference __ReferenceID14}" DisplayName="Generate Chat Completion" EligibleOperations="1" IsCustomEntity="False" Name="generateChatCompletion" />
+                                                </uibi:BusinessEntity.EntityMetadata>
+                                                <uibi:BusinessEntity.Metadata>
+                                                  <scg:Dictionary x:TypeArguments="x:String, x:Object" x:Name="__ReferenceID14">
+                                                    <x:String x:Key="Object">generateChatCompletion</x:String>
+                                                    <x:String x:Key="Client">UiPath.OpenAI.IntegrationService.Client.GenerateChatCompletionAPIClient</x:String>
+                                                    <x:String x:Key="Operation">CreateGenerateChatCompletion</x:String>
+                                                    <x:String x:Key="Path">/generateChatCompletion</x:String>
+                                                  </scg:Dictionary>
+                                                </uibi:BusinessEntity.Metadata>
+                                                <uibi:BusinessEntity.SelectedFields>
+                                                  <scg:List x:TypeArguments="uibi:EntityField" Capacity="16">
+                                                    <x:Reference>__ReferenceID15</x:Reference>
+                                                    <x:Reference>__ReferenceID16</x:Reference>
+                                                    <x:Reference>__ReferenceID17</x:Reference>
+                                                    <x:Reference>__ReferenceID18</x:Reference>
+                                                    <x:Reference>__ReferenceID19</x:Reference>
+                                                    <x:Reference>__ReferenceID20</x:Reference>
+                                                    <x:Reference>__ReferenceID21</x:Reference>
+                                                    <x:Reference>__ReferenceID22</x:Reference>
+                                                    <x:Reference>__ReferenceID23</x:Reference>
+                                                    <x:Reference>__ReferenceID24</x:Reference>
+                                                    <x:Reference>__ReferenceID25</x:Reference>
+                                                    <x:Reference>__ReferenceID26</x:Reference>
+                                                    <x:Reference>__ReferenceID27</x:Reference>
+                                                    <x:Reference>__ReferenceID28</x:Reference>
+                                                  </scg:List>
+                                                </uibi:BusinessEntity.SelectedFields>
+                                                <uibi:BusinessEntity.TelemetryProperties>
+                                                  <scg:Dictionary x:TypeArguments="uibi:TelemetryGroup, scg:IDictionary(x:String, x:String)" />
+                                                </uibi:BusinessEntity.TelemetryProperties>
+                                              </uibi:BusinessEntity>
+                                            </uoia:GenerateChatCompletion.BusinessEntity>
+                                            <uoia:GenerateChatCompletion.CachedLookupValues>
+                                              <scg:Dictionary x:TypeArguments="x:String, scg:List(uiisi:LookupValue)" />
+                                            </uoia:GenerateChatCompletion.CachedLookupValues>
+                                            <uoia:GenerateChatCompletion.DesignConnectionRequest>
+                                              <uiisi:ConnectionParameters AuthType="ElementInstance" ConnectionId="3283439e-0c36-4366-802c-ac955f888045" ConnectionName="OpenAI" ConnectorKey="uipath-openai-openai">
+                                                <uiisi:ConnectionParameters.TelemetryInfo>
+                                                  <uiisi:TelemetryInfo ActivityPack="UiPath.OpenAI.IntegrationService.Activities" ActivityPackVersion="6.1.0" Source="StudioDesktop" />
+                                                </uiisi:ConnectionParameters.TelemetryInfo>
+                                              </uiisi:ConnectionParameters>
+                                            </uoia:GenerateChatCompletion.DesignConnectionRequest>
+                                            <uoia:GenerateChatCompletion.SelectedFields>
+                                              <scg:List x:TypeArguments="uibi:EntityField" Capacity="14">
+                                                <x:Reference>__ReferenceID15</x:Reference>
+                                                <x:Reference>__ReferenceID16</x:Reference>
+                                                <x:Reference>__ReferenceID17</x:Reference>
+                                                <x:Reference>__ReferenceID18</x:Reference>
+                                                <x:Reference>__ReferenceID19</x:Reference>
+                                                <x:Reference>__ReferenceID20</x:Reference>
+                                                <x:Reference>__ReferenceID21</x:Reference>
+                                                <x:Reference>__ReferenceID22</x:Reference>
+                                                <x:Reference>__ReferenceID23</x:Reference>
+                                                <x:Reference>__ReferenceID24</x:Reference>
+                                                <x:Reference>__ReferenceID25</x:Reference>
+                                                <x:Reference>__ReferenceID26</x:Reference>
+                                                <x:Reference>__ReferenceID27</x:Reference>
+                                                <x:Reference>__ReferenceID28</x:Reference>
+                                              </scg:List>
+                                            </uoia:GenerateChatCompletion.SelectedFields>
+                                            <uoia:GenerateChatCompletion.TelemetryProperties>
+                                              <scg:Dictionary x:TypeArguments="uibi:TelemetryGroup, scg:IDictionary(x:String, x:String)" />
+                                            </uoia:GenerateChatCompletion.TelemetryProperties>
+                                          </uoia:GenerateChatCompletion>
+                                          <Sequence DisplayName="Pre-process chatGPT's response" sap:VirtualizedContainerService.HintSize="450,81" sap2010:WorkflowViewState.IdRef="Sequence_60">
+                                            <Sequence.Variables>
+                                              <Variable x:TypeArguments="s:String[]" Name="InformationPieces" />
+                                            </Sequence.Variables>
+                                            <sap:WorkflowViewStateService.ViewState>
+                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                                              </scg:Dictionary>
+                                            </sap:WorkflowViewStateService.ViewState>
+                                            <Assign sap:VirtualizedContainerService.HintSize="434,81" sap2010:WorkflowViewState.IdRef="Assign_36">
+                                              <Assign.To>
+                                                <OutArgument x:TypeArguments="x:String">[OutputString]</OutArgument>
+                                              </Assign.To>
+                                              <Assign.Value>
+                                                <InArgument x:TypeArguments="x:String">
+                                                  <Literal x:TypeArguments="x:String" Value="" />
+                                                </InArgument>
+                                              </Assign.Value>
+                                            </Assign>
+                                            <Assign sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_37">
+                                              <Assign.To>
+                                                <OutArgument x:TypeArguments="s:String[]">[InformationPieces]</OutArgument>
+                                              </Assign.To>
+                                              <Assign.Value>
+                                                <InArgument x:TypeArguments="s:String[]">[ChatGptResponse.Split("$"c)]</InArgument>
+                                              </Assign.Value>
+                                            </Assign>
+                                            <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="434,52" sap2010:WorkflowViewState.IdRef="ForEach`1_7" Values="[InformationPieces]">
+                                              <ui:ForEach.Body>
+                                                <ActivityAction x:TypeArguments="x:String">
+                                                  <ActivityAction.Argument>
+                                                    <DelegateInArgument x:TypeArguments="x:String" Name="currentItem" />
+                                                  </ActivityAction.Argument>
+                                                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="476,414" sap2010:WorkflowViewState.IdRef="Sequence_61">
+                                                    <Sequence.Variables>
+                                                      <Variable x:TypeArguments="x:Int32" Name="ßcharIndex" />
+                                                      <Variable x:TypeArguments="x:String" Name="InformationPieceValue" />
+                                                    </Sequence.Variables>
+                                                    <sap:WorkflowViewStateService.ViewState>
+                                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                      </scg:Dictionary>
+                                                    </sap:WorkflowViewStateService.ViewState>
+                                                    <Assign sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_38">
+                                                      <Assign.To>
+                                                        <OutArgument x:TypeArguments="x:Int32">[ßcharIndex]</OutArgument>
+                                                      </Assign.To>
+                                                      <Assign.Value>
+                                                        <InArgument x:TypeArguments="x:Int32">[Currentitem.LastIndexOf("ß") + 1]</InArgument>
+                                                      </Assign.Value>
+                                                    </Assign>
+                                                    <Assign sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_39">
+                                                      <Assign.To>
+                                                        <OutArgument x:TypeArguments="x:String">[InformationPieceValue]</OutArgument>
+                                                      </Assign.To>
+                                                      <Assign.Value>
+                                                        <InArgument x:TypeArguments="x:String">[Currentitem.Substring(ßcharIndex).Trim()]</InArgument>
+                                                      </Assign.Value>
+                                                    </Assign>
+                                                    <Assign sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_40">
+                                                      <Assign.To>
+                                                        <OutArgument x:TypeArguments="x:String">[OutputString]</OutArgument>
+                                                      </Assign.To>
+                                                      <Assign.Value>
+                                                        <InArgument x:TypeArguments="x:String">[outputString + InformationPieceValue + "$"]</InArgument>
+                                                      </Assign.Value>
+                                                    </Assign>
+                                                  </Sequence>
+                                                </ActivityAction>
+                                              </ui:ForEach.Body>
+                                              <sap:WorkflowViewStateService.ViewState>
+                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                  <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                                                </scg:Dictionary>
+                                              </sap:WorkflowViewStateService.ViewState>
+                                            </ui:ForEach>
+                                          </Sequence>
+                                          <Sequence DisplayName="Write to excel" sap:VirtualizedContainerService.HintSize="450,81" sap2010:WorkflowViewState.IdRef="Sequence_62">
+                                            <sap:WorkflowViewStateService.ViewState>
+                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                                              </scg:Dictionary>
+                                            </sap:WorkflowViewStateService.ViewState>
+                                            <ueab:WriteCellX Cell="[CurrentRow.ByIndex(60)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,159" sap2010:WorkflowViewState.IdRef="WriteCellX_17" Value="[Description]" />
+                                            <ueab:WriteCellX Cell="[CurrentRow.ByIndex(61)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,159" sap2010:WorkflowViewState.IdRef="WriteCellX_18" Value="[ChatGptResponse]" />
+                                            <ueab:WriteCellX Cell="[CurrentRow.ByIndex(62)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,159" sap2010:WorkflowViewState.IdRef="WriteCellX_19" Value="[OutputString]" />
+                                          </Sequence>
+                                          <Sequence DisplayName="Logging to file" sap:VirtualizedContainerService.HintSize="450,81" sap2010:WorkflowViewState.IdRef="Sequence_63">
+                                            <sap:WorkflowViewStateService.ViewState>
+                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                                              </scg:Dictionary>
+                                            </sap:WorkflowViewStateService.ViewState>
+                                            <ui:AppendLine File="{x:Null}" DisplayName="Append Line" FileName="log.txt.txt" sap:VirtualizedContainerService.HintSize="388,133" sap2010:WorkflowViewState.IdRef="AppendLine_16" Text="[Environment.Newline +Description]" UseDefaultEncoding="False" />
+                                            <ui:AppendLine File="{x:Null}" DisplayName="Append Line" FileName="log.txt.txt" sap:VirtualizedContainerService.HintSize="388,133" sap2010:WorkflowViewState.IdRef="AppendLine_17" Text="[Environment.Newline + ChatGptResponse]" UseDefaultEncoding="False" />
+                                            <ui:AppendLine File="{x:Null}" DisplayName="Append Line" FileName="log.txt.txt" sap:VirtualizedContainerService.HintSize="388,133" sap2010:WorkflowViewState.IdRef="AppendLine_18" Text="[Environment.Newline +OutputString + Environment.Newline]" UseDefaultEncoding="False" />
+                                          </Sequence>
+                                        </Sequence>
+                                      </Sequence>
+                                    </If.Then>
+                                    <If.Else>
+                                      <Sequence sap2010:WorkflowViewState.IdRef="Sequence_65" />
+                                    </If.Else>
+                                  </If>
+                                </Sequence>
+                              </ActivityAction>
+                            </ueab:ExcelForEachRowX.Body>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </ueab:ExcelForEachRowX>
+                        </Sequence>
+                      </ui:InterruptibleWhile.Body>
+                    </ui:InterruptibleWhile>
+                  </Sequence>
+                </ActivityAction>
+              </ueab:ExcelApplicationCard.Body>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ueab:ExcelApplicationCard>
+          </Sequence>
+        </ActivityAction>
+      </ueab:ExcelProcessScopeX.Body>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ueab:ExcelProcessScopeX>
+  </Sequence>
+</Activity>
